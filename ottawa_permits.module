@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ottawa Permits feature.
+ */
+
+include_once 'ottawa_permits.features.inc';
