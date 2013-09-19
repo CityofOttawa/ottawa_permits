@@ -5,3 +5,39 @@
  */
 
 include_once 'ottawa_permits.features.inc';
+
+/**
+* Implements hook_library().
+*
+* Adds the Ottawa Permits specific CSS file to the theme an add in the javascript.
+*/
+function ottawa_permits_library() {
+  $libraries['ottawa_permits'] = array(
+    'title' => 'Ottawa Permits CSS and JS Override Library',
+    'version' => '1.0',
+    'css' => array(
+      drupal_get_path('module', 'ottawa_permits') . '/css/ottawa_permits.css' => array(
+        'type' => 'file',
+        'media' => 'screen',
+      ),
+    ), 
+    'js' => array(
+        drupal_get_path('module', 'ottawa_permits') . '/js/ottawa_permits.js' => array(
+          'type' => 'file',
+          'media' => 'screen',
+        ),
+      ),
+    );
+  return $libraries;
+}
+
+/**
+* Implements template_preprocess_views_view().
+*
+* @param array $vars
+*/
+function ottawa_permits_preprocess_views_view(&$vars) {
+  if ( $vars['view']->name == 'permit_application_license') {
+    drupal_add_library('ottawa_permits', 'ottawa_permits');
+  }
+}
