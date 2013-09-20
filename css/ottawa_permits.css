@@ -8,7 +8,7 @@
 .views-exposed-form .views-exposed-widget input[type="checkbox"] + label  { display: block; padding-left: 5px; text-indent: -5px; }
 .views-exposed-form .views-exposed-widget input { padding: 0; margin:0; vertical-align: bottom; position: relative; top: 1px; *overflow: hidden; }
 
-.page-serviceottawa .views-exposed-form .views-exposed-widget .form-submit, .node-type-service .views-exposed-form .views-exposed-widget .form-submit { margin-top: 10px!important; padding: 5px; }
+.page-permits-application-and-license .views-exposed-form .views-exposed-widget .form-submit, .node-type-service .views-exposed-form .views-exposed-widget .form-submit { margin-top: 10px!important; padding: 5px; }
 .views-exposed-form .views-exposed-widget label { margin-bottom:5px!important; margin-top: 15px!important; }
 input[type="image"]+label, input[type="checkbox"]+label, input[type="radio"]+label { display:inline!important; }
 
@@ -29,9 +29,9 @@ input[type="image"]+label, input[type="checkbox"]+label, input[type="radio"]+lab
 
 /* Fix striping on rows */
 
-.page-serviceottawa #cityott-content ul.servicepane li:nth-child(even){ background-color: #eee; border-top: 2px solid #e0e0e0; border-bottom: 2px solid #e0e0e0; border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; }
-.page-serviceottawa #cityott-content ul.servicepane li:nth-child(odd){ border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; }
-.page-serviceottawa #cityott-content ul.servicepane .views-row-first { border-top:2px solid #e0e0e0; }
-.page-serviceottawa #cityott-content ul.servicepane .views-row-last { border-bottom:2px solid #e0e0e0; }
+.page-permits-application-and-license #cityott-content ul.servicepane li:nth-child(even){ background-color: #eee; border-top: 2px solid #e0e0e0; border-bottom: 2px solid #e0e0e0; border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; }
+.page-permits-application-and-license #cityott-content ul.servicepane li:nth-child(odd){ border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; }
+.page-permits-application-and-license #cityott-content ul.servicepane .views-row-first { border-top:2px solid #e0e0e0; }
+.page-permits-application-and-license #cityott-content ul.servicepane .views-row-last { border-bottom:2px solid #e0e0e0; }
 
-.page-serviceottawa #cityott-content ul.pager  { border-bottom:2px solid #e0e0e0; border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; margin-right: 3px; margin-right: -4px; }
+.page-permits-application-and-license #cityott-content ul.pager  { border-bottom:2px solid #e0e0e0; border-left: 2px solid #e0e0e0; border-right: 2px solid #e0e0e0; margin-right: 3px; margin-right: -4px; }
