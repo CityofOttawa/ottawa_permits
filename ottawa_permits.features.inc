@@ -31,9 +31,9 @@ function ottawa_permits_views_api() {
 function ottawa_permits_node_info() {
   $items = array(
     'permit_application_and_licence' => array(
-      'name' => t('Business licenses, applications, and permits'),
+      'name' => t('Permits, Business Licences and Applications'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('City of Ottawa business permits, applications and licenses'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

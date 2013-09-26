@@ -61,7 +61,7 @@ function ottawa_permits_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 30,
+        'rows' => 15,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -294,18 +294,19 @@ function ottawa_permits_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-permit_application_and_licence-field_file_attachment'
-  $field_instances['node-permit_application_and_licence-field_file_attachment'] = array(
+  // Exported field_instance: 'node-permit_application_and_licence-field_pdf_form'
+  $field_instances['node-permit_application_and_licence-field_pdf_form'] = array(
     'bundle' => 'permit_application_and_licence',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 14,
+        'type' => 'link_default',
+        'weight' => 25,
       ),
       'featured' => array(
         'label' => 'above',
@@ -328,93 +329,39 @@ function ottawa_permits_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_file_attachment',
-    'label' => 'PDF version of form',
+    'field_name' => 'field_pdf_form',
+    'label' => 'PDF form',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
       'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => 'pdf',
-      'max_filesize' => '',
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
       'user_register_form' => FALSE,
+      'validate_url' => 1,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'caption_from_title' => 1,
-        'insert' => 0,
-        'insert_absolute' => 0,
-        'insert_class' => '',
-        'insert_default' => 'auto',
-        'insert_styles' => array(
-          'auto' => 'auto',
-          'colorbox__apps_featured_screenshot' => 0,
-          'colorbox__apps_logo' => 0,
-          'colorbox__apps_logo_small' => 0,
-          'colorbox__apps_screenshot' => 0,
-          'colorbox__large' => 0,
-          'colorbox__linkit_thumb' => 0,
-          'colorbox__medium' => 0,
-          'colorbox__panopoly_image_featured' => 0,
-          'colorbox__panopoly_image_full' => 0,
-          'colorbox__panopoly_image_half' => 0,
-          'colorbox__panopoly_image_quarter' => 0,
-          'colorbox__panopoly_image_spotlight' => 0,
-          'colorbox__panopoly_image_square' => 0,
-          'colorbox__panopoly_image_thumbnail' => 0,
-          'colorbox__panopoly_image_video' => 0,
-          'colorbox__slider' => 0,
-          'colorbox__small_thumbnail' => 0,
-          'colorbox__square_thumbnail' => 0,
-          'colorbox__stephen_term_image_test' => 0,
-          'colorbox__stephen_test_terms' => 0,
-          'colorbox__thumbnail' => 0,
-          'colorbox__wetkit_image_featured' => 0,
-          'colorbox__wetkit_image_full' => 0,
-          'colorbox__wetkit_image_half' => 0,
-          'colorbox__wetkit_image_quarter' => 0,
-          'colorbox__wetkit_image_spotlight' => 0,
-          'colorbox__wetkit_image_square' => 0,
-          'colorbox__wetkit_image_thumbnail' => 0,
-          'custom_formatters_wetkit_lightbox' => 0,
-          'icon_link' => 0,
-          'image' => 0,
-          'image_apps_featured_screenshot' => 0,
-          'image_apps_logo' => 0,
-          'image_apps_logo_small' => 0,
-          'image_apps_screenshot' => 0,
-          'image_large' => 0,
-          'image_linkit_thumb' => 0,
-          'image_medium' => 0,
-          'image_panopoly_image_featured' => 0,
-          'image_panopoly_image_full' => 0,
-          'image_panopoly_image_half' => 0,
-          'image_panopoly_image_quarter' => 0,
-          'image_panopoly_image_spotlight' => 0,
-          'image_panopoly_image_square' => 0,
-          'image_panopoly_image_thumbnail' => 0,
-          'image_panopoly_image_video' => 0,
-          'image_slider' => 0,
-          'image_small_thumbnail' => 0,
-          'image_square_thumbnail' => 0,
-          'image_stephen_term_image_test' => 0,
-          'image_stephen_test_terms' => 0,
-          'image_thumbnail' => 0,
-          'image_wetkit_image_featured' => 0,
-          'image_wetkit_image_full' => 0,
-          'image_wetkit_image_half' => 0,
-          'image_wetkit_image_quarter' => 0,
-          'image_wetkit_image_spotlight' => 0,
-          'image_wetkit_image_square' => 0,
-          'image_wetkit_image_thumbnail' => 0,
-          'link' => 0,
-        ),
-        'insert_width' => '',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
       'weight' => 12,
     ),
   );
@@ -644,9 +591,9 @@ function ottawa_permits_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-permit_type-description_field'
-  $field_instances['taxonomy_term-permit_type-description_field'] = array(
-    'bundle' => 'permit_type',
+  // Exported field_instance: 'taxonomy_term-application_type-description_field'
+  $field_instances['taxonomy_term-application_type-description_field'] = array(
+    'bundle' => 'application_type',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'A field replacing taxonomy term description.',
@@ -691,9 +638,9 @@ function ottawa_permits_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-permit_type-name_field'
-  $field_instances['taxonomy_term-permit_type-name_field'] = array(
-    'bundle' => 'permit_type',
+  // Exported field_instance: 'taxonomy_term-application_type-name_field'
+  $field_instances['taxonomy_term-application_type-name_field'] = array(
+    'bundle' => 'application_type',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'A field replacing taxonomy term name.',
@@ -747,7 +694,7 @@ function ottawa_permits_field_default_field_instances() {
   t('Body');
   t('Description');
   t('Name');
-  t('PDF version of form');
+  t('PDF form');
   t('Permit type');
   t('Requirements');
   t('Where to Apply');
