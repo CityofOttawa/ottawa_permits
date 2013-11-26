@@ -43,7 +43,7 @@ function ottawa_permits_field_default_field_bases() {
   // Exported field_base: 'field_application_type'
   $field_bases['field_application_type'] = array(
     'active' => 1,
-    'cardinality' => 6,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_application_type',
@@ -65,7 +65,7 @@ function ottawa_permits_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'permit_type',
+          'vocabulary' => 'application_type',
           'parent' => 0,
         ),
       ),
@@ -136,38 +136,35 @@ function ottawa_permits_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_file_attachment'
-  $field_bases['field_file_attachment'] = array(
+  // Exported field_base: 'field_pdf_form'
+  $field_bases['field_pdf_form'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_file_attachment',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
+    'field_name' => 'field_pdf_form',
+    'foreign keys' => array(),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'file',
+    'module' => 'link',
     'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'entity_translation_sync' => array(
-        0 => 'fid',
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
       ),
-      'uri_scheme' => 'public',
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
     ),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'link_field',
   );
 
   // Exported field_base: 'field_permit_type'
@@ -193,6 +190,7 @@ function ottawa_permits_field_default_field_bases() {
         'Parking Permits' => 'Parking Permits',
         'Right-of-way' => 'Right-of-way',
         'Signs' => 'Signs',
+        'Other' => 'Other',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
